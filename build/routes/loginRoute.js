@@ -12,9 +12,6 @@ function requireAuth(req, res, next) {
 }
 var router = express_1.Router();
 exports.router = router;
-router.get('/login', function (req, res) {
-    res.send("\n      <form method=\"POST\">\n        <div>\n          <lable>Email</lable>\n          <input name=\"email\"/>\n        </div>\n        <div>\n          <lable>Password</lable>\n          <input name=\"password\" type=\"password\"/>\n        </div>\n        <button>Submit</button>\n      </form>\n      <h1>Hi there from router</h1>\n    ");
-});
 router.post('/login', function (req, res) {
     var _a = req.body, email = _a.email, password = _a.password;
     if (email && password && email === 'hi@hi.com' && password === 'pa') {
