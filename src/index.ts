@@ -10,6 +10,7 @@ import './controllers/LoginController';
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(express.json());
 app.use(cookieSession({ keys: ['asdfgh'] }));
 app.use(router);
 app.use(AppRouter.getInstance());

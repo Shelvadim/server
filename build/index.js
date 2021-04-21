@@ -12,6 +12,7 @@ var AppRouter_1 = require("./AppRouter");
 require("./controllers/LoginController");
 var app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: true }));
+//app.use(express.json());
 app.use(cookie_session_1.default({ keys: ['asdfgh'] }));
 app.use(loginRoute_1.router);
 app.use(AppRouter_1.AppRouter.getInstance());
